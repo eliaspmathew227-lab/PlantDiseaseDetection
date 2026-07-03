@@ -1,24 +1,7 @@
-import os
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.prediction import router as prediction_router
-
-
-def get_allowed_origins():
-    default_origins = [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "https://pleasing-adaptation-production-2d6a.up.railway.app",
-    ]
-    extra_origins = os.getenv("FRONTEND_ORIGINS", "")
-    configured_origins = [
-        origin.strip()
-        for origin in extra_origins.split(",")
-        if origin.strip()
-    ]
-    return default_origins + configured_origins
 
 app = FastAPI(
     title="Tomato Disease Detector API",
@@ -28,9 +11,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=get_allowed_origins(),
-    allow_origin_regex=r"https://.*\.up\.railway\.app",
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

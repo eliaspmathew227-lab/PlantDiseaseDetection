@@ -1,0 +1,105 @@
+{
+  "Healthy": {
+    "description": "The uploaded leaf appears healthy based on the current prediction.",
+    "symptoms": [
+      "Uniform green leaf color",
+      "No visible lesions or spots",
+      "No major yellowing or leaf curl"
+    ],
+    "prevention": [
+      "Inspect plants regularly",
+      "Water at soil level where possible",
+      "Maintain good spacing for airflow",
+      "Remove weeds and plant debris"
+    ],
+    "treatment": [
+      "No disease treatment is needed",
+      "Continue routine crop care and monitoring"
+    ],
+    "consult_expert": "Consult an agricultural expert if the plant shows wilting, rapid yellowing, or spreading marks."
+  },
+  "Early Blight": {
+    "description": "Early blight is a fungal tomato disease that often causes dark leaf spots with concentric rings.",
+    "symptoms": [
+      "Brown circular spots with target-like rings",
+      "Yellowing around older leaf lesions",
+      "Lower leaves drying or dropping"
+    ],
+    "prevention": [
+      "Use certified disease-free seeds or seedlings",
+      "Rotate crops away from tomato and potato families",
+      "Avoid overhead watering",
+      "Remove infected debris after harvest"
+    ],
+    "treatment": [
+      "Prune infected leaves carefully",
+      "Improve air circulation around plants",
+      "Apply a locally recommended fungicide when needed"
+    ],
+    "consult_expert": "Consult a local agricultural officer before applying chemical control."
+  },
+  "Late Blight": {
+    "description": "Late blight is a fast-spreading disease that can severely damage tomato leaves, stems, and fruit.",
+    "symptoms": [
+      "Water-soaked gray-green patches",
+      "Dark brown or black lesions",
+      "White fuzzy growth during humid conditions",
+      "Rapid plant collapse in severe cases"
+    ],
+    "prevention": [
+      "Avoid wet foliage and overcrowding",
+      "Destroy infected plant material safely",
+      "Use resistant varieties when available",
+      "Monitor fields closely during cool and humid weather"
+    ],
+    "treatment": [
+      "Remove infected plants if disease is advanced",
+      "Use preventive fungicide programs where recommended",
+      "Do not compost heavily infected material"
+    ],
+    "consult_expert": "Seek expert advice quickly because late blight can spread rapidly."
+  },
+  "Septoria Leaf Spot": {
+    "description": "Septoria leaf spot is a fungal disease that produces many small spots and can weaken tomato plants.",
+    "symptoms": [
+      "Small circular spots with gray centers",
+      "Dark borders around spots",
+      "Yellowing leaves",
+      "Spots beginning on lower leaves"
+    ],
+    "prevention": [
+      "Mulch soil to reduce splash spread",
+      "Water near the base of plants",
+      "Increase plant spacing",
+      "Remove infected lower leaves"
+    ],
+    "treatment": [
+      "Prune affected foliage",
+      "Keep leaves dry when irrigating",
+      "Apply recommended fungicide if infection spreads"
+    ],
+    "consult_expert": "Consult an expert if spotting spreads quickly across multiple plants."
+  },
+  "Bacterial Spot": {
+    "description": "Bacterial spot causes dark, water-soaked lesions on tomato leaves and can also affect fruit.",
+    "symptoms": [
+      "Small dark greasy-looking spots",
+      "Yellow halos around some lesions",
+      "Ragged leaf appearance as spots merge",
+      "Raised or scabby fruit spots"
+    ],
+    "prevention": [
+      "Use clean seed and healthy transplants",
+      "Avoid working with plants when wet",
+      "Disinfect tools between affected plants",
+      "Rotate crops and remove infected debris"
+    ],
+    "treatment": [
+      "Remove infected leaves where practical",
+      "Improve airflow and reduce leaf wetness",
+      "Use copper-based products only when locally recommended"
+    ],
+    "consult_expert": "Ask an agricultural expert before using bactericides or copper products."
+  }
+}
+

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+dist/
+.DS_Store
+backend/app/models/*.keras
+backend/app/models/*.h5
+backend/app/models/*.tflite
+ml/dataset/
+ml/.venv
+

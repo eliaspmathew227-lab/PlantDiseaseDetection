@@ -41,11 +41,11 @@ def _load_model():
 
 
 def _predict_with_trained_model(image_bytes: bytes):
-    import numpy as np
-
     model, class_names = _load_model()
     if model is None or class_names is None:
         return None
+
+    import numpy as np
 
     image = Image.open(BytesIO(image_bytes)).convert("RGB").resize(IMAGE_SIZE)
     image_array = np.asarray(image, dtype=np.float32)

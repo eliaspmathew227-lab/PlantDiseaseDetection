@@ -1,4 +1,5 @@
 from io import BytesIO
+import logging
 
 from fastapi import APIRouter, File, HTTPException, UploadFile
 from PIL import Image, UnidentifiedImageError
@@ -7,6 +8,7 @@ from app.services.disease_info_service import get_disease_info
 from app.services.model_service import predict_image
 
 router = APIRouter(tags=["prediction"])
+logger = logging.getLogger(__name__)
 
 ALLOWED_CONTENT_TYPES = {"image/jpeg", "image/png", "image/webp"}
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
@@ -33,8 +35,15 @@ async def predict(file: UploadFile = File(...)):
     except (UnidentifiedImageError, OSError):
         raise HTTPException(status_code=400, detail="Uploaded file is not a valid image.")
 
-    prediction = predict_image(raw_image, file.filename or "leaf-image")
-    disease_info = get_disease_info(prediction["class_name"])
+    try:
+        prediction = predict_image(raw_image, file.filename or "leaf-image")
+        disease_info = get_disease_info(prediction["class_name"])
+    except Exception:
+        logger.exception("Prediction failed")
+        raise HTTPException(
+            status_code=500,
+            detail="Prediction service failed. Check backend logs for details.",
+        )
 
     return {
         "prediction": prediction["class_name"],
